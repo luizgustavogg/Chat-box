@@ -1,0 +1,40 @@
+<?php
+include_once('php/include/include.php');
+  session_start();
+  if(!isset($_SESSION['unique_id'])){
+    header("Location: login.php");
+  }
+
+?>
+
+<?php include_once('header.php'); ?>
+
+<body>
+  <div class="wrapper">
+    <section class="form editr">
+      <a href="perfil.php" class="back-icon"><i class="fa-arrow-left"><img src="img/arrow left.png" alt=""></i></a>
+      <header>Deletar a conta</header>
+      <form action="#" method="POST">
+        <div class="error-txt"></div>
+        <div class="name-details">
+          <div class="field input">
+            <label>Email</label>
+            <input type="email" id="email" name="emailat" placeholder="Digite seu Email" required>
+          </div>
+          <div class="field input">
+            <label>Senha</label>
+            <input type="password" id="senha" name="senha" placeholder="Digite seu Email" required>
+          </div>
+          <div class="field button">
+            <input type="submit" value="enviar">
+          </div>
+        </div>
+      </form>
+    </section>
+  </div>
+
+
+  <script src="script/editr.js"></script>
+</body>
+
+</html>
